@@ -9,6 +9,7 @@ void main(){
     char name[500];
     char fname[500];
     char sch[1000];
+    char group[500];
 
 // declaration of variable
 
@@ -18,10 +19,12 @@ void main(){
 //  taking input from user
 /*
     printf("Enter the Year of Examination: ");
-    scanf("%s", exa);
+    scanf("%s", exa);*/
     printf("Enter the Roll Number: ");
     scanf("%s", rol);
-    printf("Enter your Name: ");
+    printf("Enter the Group: ");
+    scanf("%s", group);
+ /*   printf("Enter your Name: ");
     scanf("%s", name);
     printf("Enter your Father's Name: ");
     scanf("%s", fname);
@@ -69,14 +72,29 @@ void main(){
 
 // display of mark sheet
 
+    system("cls");
+
+// header of the sheet
     printf("\n\t\t********************************************");
-    printf("\n\n\t\t\tBOARD OF SECONDARY EDUCATION\n\t\t\t\t   KARACH\n");
-    printf("\n\t\t********************************************");
+    printf("\n\t\t\tBOARD OF SECONDARY EDUCATION\n\t\t\t\t   KARACH\n");
+    printf("\t\t********************************************");
     printf("\n\t\t\t     Statement of Marks");
     printf("\n\t\t\t     S.S.C  EXAMINATION");
     printf("\n\t\t       (FOR SUCCESSFUL CANDIDATE ONLY)");
-    printf("\n\nEXAMINATION\tANNUAL\t%s", exa);
-    printf()
+
+// marksheet starting
+
+    printf("\n\n\n\  EXAMINATION\tANNUAL\t%s", exa);
+    printf("\t\t ROLL NUMBER\t%s", rol);
+    printf("\n\n  NAME\t%s", name);
+    printf("\t\t\t\t GROUP\t%s", group);
+    printf("\n\n  FATHER\'S NAME   %s", fname);
+    printf("\n\n  SCHOOL/PRIVATE   %s", sch);
+    printf("\n\n\n\t\t\t\t  SUBJECT");
+    printf("\n _________________________________________________________________________");
+
+
+
 
     getch();
 }
