@@ -1,6 +1,6 @@
 #include <stdio.h>
 
-void mail(){
+void main(){
 
 // declaration of arrays
 
@@ -12,11 +12,11 @@ void mail(){
 
 // declaration of variable
 
-    float sin, urd, isl, pst, biop, biot,chp, cht, phyp, phyt, engI, engII, math, compp, compt;
+    float sin, urd, isl, pst, biop, biot, chp, cht, phyp, phyt, engI, engII, math, compp, compt;
     float total, pcent, obt;
 
 //  taking input from user
-
+/*
     printf("Enter the Year of Examination: ");
     scanf("%s", exa);
     printf("Enter the Roll Number: ");
@@ -60,12 +60,23 @@ void mail(){
 
 // started calculating the input
 
-//    obt = sin+urd+isl+pst+biop+biot+chp+cht+phyp+phyt+engI+engII+math+compp+compt;
-//    printf("%f", obt);
+    obt = sin+urd+isl+pst+biop+biot+chp+cht+phyp+phyt+engI+engII+math+compp+compt;
+    total = 850;
+    pcent = (obt*100)/total;
+    printf("Marks Obtained: %0.2f\n", obt);
+    printf("Total Marks: %0.2f \n", total);
+    printf("Percentage: %0.2f \n", pcent);*/
 
+// display of mark sheet
 
-
-
+    printf("\n\t\t********************************************");
+    printf("\n\n\t\t\tBOARD OF SECONDARY EDUCATION\n\t\t\t\t   KARACH\n");
+    printf("\n\t\t********************************************");
+    printf("\n\t\t\t     Statement of Marks");
+    printf("\n\t\t\t     S.S.C  EXAMINATION");
+    printf("\n\t\t       (FOR SUCCESSFUL CANDIDATE ONLY)");
+    printf("\n\nEXAMINATION\tANNUAL\t%s", exa);
+    printf()
 
     getch();
 }
