@@ -66,8 +66,8 @@ void main(){
     obt = (sin+urd+isl+pst+biop+biot+chp+cht+phyp+phyt+engI+engII+math+compp+compt);
     total = 850;
     pcent = (obt*100)/total;
-//    tI = (sin+urd+isl+pst+compp+compt+engI+engII);
-//    tII = (math+biot+biop+cht+chp+phyp+pyht);
+    tI = (sin+urd+isl+pst+compp+compt+engI+engII);
+    tII = (math+biot+biop+cht+chp+phyp+phyt);
     printf("Marks Obtained: %0.2f\n", obt);
     printf("Total Marks: %0.2f \n", total);
     printf("Percentage: %0.2f \n", pcent);
@@ -103,10 +103,11 @@ void main(){
     printf("\n  COMPUTER THEORY\t%0.2f\t\tPHYSICS PRACTICAL\t%0.2f", compt, phyp);
     printf("\n  COMPUTER PRACTICAL\t%0.2f", urd, compp);
     printf("\n _________________________________________________________________________");
-//    printf("\n  TOTAL OF COMPONENT I\t%0.2f\t\ttotal of component II\t%0.2f", tI, tII);
-
-
-
+    printf("\n  TOTAL OF COMPONENT I\t%0.2f\t\tTOTAL OF COMPONENT II\t%0.2f", tI, tII);
+    printf("\n _________________________________________________________________________");
+    printf("\n\n\n\t\t  GRAND TOTAL %0.2f   OUT OF   %0.2f", obt, total);
+    printf("\n\n\n\t\t\t  PERCENTAGE %0.2f%%\n\n", pcent);
+    printf("\n _________________________________THE END__________________________________\n");
 
     getch();
 }
