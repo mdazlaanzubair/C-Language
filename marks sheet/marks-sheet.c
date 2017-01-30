@@ -14,17 +14,17 @@ void main(){
 // declaration of variable
 
     float sin, urd, isl, pst, biop, biot, chp, cht, phyp, phyt, engI, engII, math, compp, compt;
-    float total, pcent, obt;
+    float total, pcent, obt, tI,tII;
 
 //  taking input from user
-/*
+
     printf("Enter the Year of Examination: ");
-    scanf("%s", exa);*/
+    scanf("%s", exa);
     printf("Enter the Roll Number: ");
     scanf("%s", rol);
     printf("Enter the Group: ");
     scanf("%s", group);
- /*   printf("Enter your Name: ");
+    printf("Enter your Name: ");
     scanf("%s", name);
     printf("Enter your Father's Name: ");
     scanf("%s", fname);
@@ -63,12 +63,14 @@ void main(){
 
 // started calculating the input
 
-    obt = sin+urd+isl+pst+biop+biot+chp+cht+phyp+phyt+engI+engII+math+compp+compt;
+    obt = (sin+urd+isl+pst+biop+biot+chp+cht+phyp+phyt+engI+engII+math+compp+compt);
     total = 850;
     pcent = (obt*100)/total;
+//    tI = (sin+urd+isl+pst+compp+compt+engI+engII);
+//    tII = (math+biot+biop+cht+chp+phyp+pyht);
     printf("Marks Obtained: %0.2f\n", obt);
     printf("Total Marks: %0.2f \n", total);
-    printf("Percentage: %0.2f \n", pcent);*/
+    printf("Percentage: %0.2f \n", pcent);
 
 // display of mark sheet
 
@@ -81,17 +83,27 @@ void main(){
     printf("\n\t\t\t     Statement of Marks");
     printf("\n\t\t\t     S.S.C  EXAMINATION");
     printf("\n\t\t       (FOR SUCCESSFUL CANDIDATE ONLY)");
-
-// marksheet starting
-
     printf("\n\n\n\  EXAMINATION\tANNUAL\t%s", exa);
     printf("\t\t ROLL NUMBER\t%s", rol);
     printf("\n\n  NAME\t%s", name);
     printf("\t\t\t\t GROUP\t%s", group);
     printf("\n\n  FATHER\'S NAME   %s", fname);
     printf("\n\n  SCHOOL/PRIVATE   %s", sch);
-    printf("\n\n\n\t\t\t\t  SUBJECT");
+//    printf("\n\n\n _________________________________________________________________________");
+    printf("\n\n\n\n\t\t\t\t  SUBJECT");
     printf("\n _________________________________________________________________________");
+    printf("\n    COMPONENT I\t\tMARKS\t   \tCOMPONENT II\t\tMARKS");
+    printf("\n _________________________________________________________________________");
+    printf("\n  SINDHI SALEES\t\t%0.2f\t\tMATHEMATICS\t\t%0.2f", sin, math);
+    printf("\n  URDU\t\t\t%0.2f\t\tBIOLOGY THEORY\t\t%0.2f", urd, biot);
+    printf("\n  ENGLISH PART I\t%0.2f\t\tBIOLOGY PRACTICAL\t%0.2f", engI, biop);
+    printf("\n  ENGLISH PART II\t%0.2f\t\tCHEMISTRY THEORY\t%0.2f", engII, cht);
+    printf("\n  PAKISTAN STUDIES\t%0.2f\t\tCHEMISTRY PRACTICAL\t%0.2f", pst, chp);
+    printf("\n  ISLAMIAT\t\t%0.2f\t\tPHYSICS THEORY\t\t%0.2f", isl, phyt);
+    printf("\n  COMPUTER THEORY\t%0.2f\t\tPHYSICS PRACTICAL\t%0.2f", compt, phyp);
+    printf("\n  COMPUTER PRACTICAL\t%0.2f", urd, compp);
+    printf("\n _________________________________________________________________________");
+//    printf("\n  TOTAL OF COMPONENT I\t%0.2f\t\ttotal of component II\t%0.2f", tI, tII);
 
 
 
