@@ -83,7 +83,7 @@ void main(){
     printf("\n\t\t\t     Statement of Marks");
     printf("\n\t\t\t     S.S.C  EXAMINATION");
     printf("\n\t\t       (FOR SUCCESSFUL CANDIDATE ONLY)");
-    printf("\n\n\n\  EXAMINATION\tANNUAL\t%s", exa);
+    printf("\n\n\n  EXAMINATION\tANNUAL\t%s", exa);
     printf("\t\t ROLL NUMBER\t%s", rol);
     printf("\n\n  NAME\t%s", name);
     printf("\t\t\t\t GROUP\t%s", group);
