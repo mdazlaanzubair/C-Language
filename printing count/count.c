@@ -1,9 +1,8 @@
 #include <stdio.h>
 int main(){
-    int i;
-    system("cls");
-    for(i=0; i>=10; i++){
-        printf("Count = %d", i);
+    int i=1;
+    for(i=0; i<=10; i++){
+        printf("%d\n\n", i);
     }
     return 0;
 }
