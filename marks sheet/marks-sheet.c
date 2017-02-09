@@ -4,12 +4,12 @@ void main(){
 
 // declaration of arrays
 
-    char exa[500];
-    char rol[100];
-    char name[500];
-    char fname[500];
+    char exa[5000];
+    char rol[1000];
+    char name[5000];
+    char fname[5000];
     char sch[1000];
-    char group[500];
+    char group[5000];
 
 // declaration of variable
 
@@ -77,6 +77,7 @@ void main(){
     system("cls");
 
 // header of the sheet
+
     printf("\n\t\t********************************************");
     printf("\n\t\t\tBOARD OF SECONDARY EDUCATION\n\t\t\t\t   KARACH\n");
     printf("\t\t********************************************");
@@ -89,7 +90,9 @@ void main(){
     printf("\t\t\t\t GROUP\t%s", group);
     printf("\n\n  FATHER\'S NAME   %s", fname);
     printf("\n\n  SCHOOL/PRIVATE   %s", sch);
-//    printf("\n\n\n _________________________________________________________________________");
+
+// starting of marks sheet
+
     printf("\n\n\n\n\t\t\t\t  SUBJECT");
     printf("\n _________________________________________________________________________");
     printf("\n    COMPONENT I\t\tMARKS\t   \tCOMPONENT II\t\tMARKS");
@@ -107,6 +110,9 @@ void main(){
     printf("\n _________________________________________________________________________");
     printf("\n\n\n\t\t  GRAND TOTAL %0.2f   OUT OF   %0.2f", obt, total);
     printf("\n\n\n\t\t\t  PERCENTAGE %0.2f%%\n\n", pcent);
+
+//ending of marks sheet
+
     printf("\n _________________________________THE END__________________________________\n");
 
     getch();
