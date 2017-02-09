@@ -2,7 +2,7 @@
 
 int main()
 {
-    int i, b, a, num=1,num1=2, num2=3, num3=4, num4=5, num5=6, num6=7, num7=8, num8=9, num9=10, num10=11, num11=12;
+    int i, b, a, r, num=1,num1=2, num2=3, num3=4, num4=5, num5=6, num6=7, num7=8, num8=9, num9=10, num10=11, num11=12;
 
     printf("\n");
 
@@ -35,6 +35,8 @@ int main()
     }
 
     printf("\n");
+
+    scanf("%d",&r);
 
     return 0;
 }
