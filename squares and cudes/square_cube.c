@@ -1,13 +1,12 @@
-# include <stdio.h>
-
+#include <stdio.h>
+#include <math.h>
 int main(){
-
-    int num, sqr, cub;
-    printf("Enter a number to be calculated: ");
-    scanf("%d",&num);
-    sqr=num*num;
-    cub=num*num*num;
-    printf("\n\nSquare of your number is %d, and cude is %d\n\n\n\n",sqr,cub);
+    int i,n;
+    printf("Enter the value of N: ");
+    scanf("%d",&n);
+    printf("No     Square   Cube\n",n);
+    for(i=1;i<=n;i++){
+        printf("%d \t %ld \t %ld \n",i,(i*i),(i*i*i));
+    }
     return 0;
-
 }

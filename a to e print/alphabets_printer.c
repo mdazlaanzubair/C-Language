@@ -7,7 +7,7 @@ int main(){
     scanf("%d",&a);
     num = 64 + a;
     for(i='A'; i<=num; i++){
-        printf("\t%c\n\n",i);
+        printf("\t%c\t",i);
     }
     return 0;
 }
