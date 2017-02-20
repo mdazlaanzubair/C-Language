@@ -19,17 +19,17 @@ void main(){
 //  taking input from user
 
     printf("Enter the Year of Examination: ");
-    scanf("%s", exa);
+    scanf("%s", &exa);
     printf("Enter the Roll Number: ");
-    scanf("%s", rol);
+    scanf("%s", &rol);
     printf("Enter the Group: ");
-    scanf("%s", group);
+    scanf("%s", &group);
     printf("Enter your Name: ");
-    scanf("%s", name);
+    scanf("%s", &name);
     printf("Enter your Father's Name: ");
-    scanf("%s", fname);
+    scanf("%s", &fname);
     printf("Enter your School Name: ");
-    scanf("%s", sch);
+    scanf("%s", &sch);
     printf("Enter your marks in Sindhi: ");
     scanf("%f", &sin);
     printf("Enter your marks in Urdu: ");
