@@ -3,13 +3,13 @@ int main(){
 
     char s[1000],i;
 
-    printf("Enter The String Here: ");
+    printf("Enter a String: ");
 
     scanf("%s",s);
 
     for(i=0;s[i]!='\0';i++){}
 
-    printf("\nNumber of Characters in The String is %d.\n",i);
+    printf("\nLength of the String %d.\n",i);
 
     getch();
 }
