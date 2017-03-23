@@ -17,11 +17,13 @@ void main (void)
 
 if(ch=='A' || ch=='a')
  printf("%.2f + %.2f = %.2f",num1,num2,num1+num2);
-if(ch=='S'|| ch=='s')
+else if(ch=='S'|| ch=='s')
  printf("%.2f - %.2f = %.2f",num1,num2,num1-num2);
-if(ch=='M'|| ch=='m')
+else if(ch=='M'|| ch=='m')
  printf("%.2f x %.2f = %.2f",num1,num2,num1*num2);
-if(ch=='D'|| ch=='d')
+else if(ch=='D'|| ch=='d')
  printf("%.2f / %.2f = %.2f",num1,num2,num1/num2);
+else
+ printf("Use these characters for operations:\n\n A or a => to Addition\n\n S or s => Subtraction\n\n M or m => Multiplication\n\n D or d => Division");
 getch();
 }
