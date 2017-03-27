@@ -1,4 +1,3 @@
-
 #include<stdio.h>
 #include<conio.h>
 void main()
@@ -33,20 +32,20 @@ void main()
  printf("\n ********************************************");
 
 //////////// Ladder If Statement ////////////
- if(p>=80)
-    printf("\n\n Your Grade : A+");
+   if(p>=80)
+   printf("\n\n Your Grade : A+");
 
    else if(p>=75)
-     printf("\n\n Your Grade : A");
+   printf("\n\n Your Grade : A");
 
-     else if(p>=60)
-       printf("\n\n Your Grade : B");
+   else if(p>=60)
+   printf("\n\n Your Grade : B");
 
-        else if(p>=45)
-          printf("\n\n Your Grade : C");
+   else if(p>=45)
+   printf("\n\n Your Grade : C");
 
-            else if(p>=35)
-              printf("\n\n Your grade : D");
+   else if(p>=35)
+   printf("\n\n Your grade : D");
 
    else
      printf("\n\n You Are Fail");
