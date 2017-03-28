@@ -127,6 +127,7 @@ void info()
         printf("\n\n\t\t\tEnter Your Choice: ");
         choice = getch();
         system("cls");
+        char c;
     switch(choice){
             case '1':
                     printf("\n\n\n\n");
