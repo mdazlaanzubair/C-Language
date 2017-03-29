@@ -3,6 +3,13 @@
 #include <stdlib.h>
 
 void main(){
+
+    int room_no;
+    char name[30];
+    char address[50];
+    char phone[10];
+
+
 // backgroung and text color
 
     system("Color 79");
@@ -64,12 +71,13 @@ void main(){
         system("cls");
     switch(choice){
             case '1':
+//                    add();
                     break;
             case '2':
                     info();
                     break;
             case '3':
-//                    rooms();
+//                    display();
                     break;
             case '4':
 //                    edit();
@@ -84,8 +92,7 @@ void main(){
 getch();
 }
 
-void info()
-{
+void info(){
         printf("\n\n\n\n");
         printf("\n\t\t\t\t\t\t*********************");
         printf("\n\t\t\t\t\t\t* Rooms Information *");
@@ -141,6 +148,14 @@ void info()
                     printf("\t\t\ta dressing table, a bedside table, a small writing table, a TV,\n");
                     printf("\t\t\tand a small fridge. The floor is covered with carpet and most suitable\n");
                     printf("\t\t\tfor small families.");
+
+// back to main menu
+
+                    printf("\n\n\t\t\t\t\t\t\t\t\t\t\t\tHit Enter to go Back...!!!\n\n\n");
+                    c = getc(stdin);
+                    if(c=='\n'){
+                        system("cls");
+                        info();}
                     break;
             case '2':
                     printf("\n\n\n\n");
@@ -150,6 +165,14 @@ void info()
                     printf("\n\n\n\n");
                     printf("\t\t\tDuplex Room:\n");
                     printf("\t\t\t\tThis type is composed of two rooms located on two different floors,\n\t\t\tconnected with internal stairs.\n");
+
+// back to main menu
+
+                    printf("\n\n\t\t\t\t\t\t\t\t\t\t\t\tHit Enter to go Back...!!!\n\n\n");
+                    c = getc(stdin);
+                    if(c=='\n')
+                        system("cls");
+                        info();
                     break;
             case '3':
                     printf("\n\n\n\n");
@@ -159,6 +182,14 @@ void info()
                     printf("\n\n\n\n");
                     printf("\t\t\tSuite:\n");
                     printf("\t\t\t\tIt is composed of one or more bedrooms, a living room, and a dining area.\n\t\t\tIt is excellent for the guests who prefer more space, wish to entertain their guests\n\t\t\twithout interruption and giving up privacy.\n");
+
+// back to main menu
+
+                    printf("\n\n\t\t\t\t\t\t\t\t\t\t\t\tHit Enter to go Back...!!!\n\n\n");
+                    c = getc(stdin);
+                    if(c=='\n')
+                        system("cls");
+                        info();
                     break;
             case '4':
                     printf("\n\n\n\n");
@@ -168,6 +199,14 @@ void info()
                     printf("\n\n\n\n");
                     printf("\t\t\tCabana:\n");
                     printf("\t\t\t\tThis type of room faces water body, beach, or a swimming pool. \n\t\t\tIt generally has a large balcony.\n");
+
+// back to main menu
+
+                    printf("\n\n\t\t\t\t\t\t\t\t\t\t\t\tHit Enter to go Back...!!!\n\n\n");
+                    c = getc(stdin);
+                    if(c=='\n')
+                        system("cls");
+                        info();
                     break;
             case '5':
                     printf("\n\n\n\n");
@@ -177,10 +216,26 @@ void info()
                     printf("\n\n\n\n");
                     printf("\t\t\tStudio:\n");
                     printf("\t\t\t\tThey are twin adjacent rooms: A living room with sofa, \n\t\t\tcoffee table and chairs, and a bedroom. It is also equipped with \n\t\t\tfan/air conditioner, a small kitchen corner, and a dining area. \n\t\t\tThe furniture is often compact.\n");
+
+// back to main menu
+
+                    printf("\n\n\t\t\t\t\t\t\t\t\t\t\t\tHit Enter to go Back...!!!\n\n\n");
+                    c = getc(stdin);
+                    if(c=='\n')
+                        system("cls");
+                        info();
                     break;
             default:
                     printf("\n\n\t\t\tError: Please make sure your Choice is Valid, Thanks!");
-                    printf("\n\n\t\t\t\t\t\t\t\t\t Press any key to continue...!!");
+
+// back to main menu
+
+                    printf("\n\n\t\t\t\t\t\t\t\t\t\t\t\tHit Enter to go Back...!!!\n\n\n");
+                    c = getc(stdin);
+                    if(c=='\n')
+                        system("cls");
+                        info();
+
                     getch();
         }
 }
