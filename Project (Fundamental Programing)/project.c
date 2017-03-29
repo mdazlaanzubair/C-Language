@@ -4,12 +4,6 @@
 
 void main(){
 
-    int room_no;
-    char name[30];
-    char address[50];
-    char phone[10];
-
-
 // backgroung and text color
 
     system("Color 79");
@@ -61,7 +55,6 @@ void main(){
         printf("\n\t\t\t2. Rooms Information");
         printf("\n\t\t\t3. Rooms Allotted");
         printf("\n\t\t\t4. Edit Record");
-        printf("\n\t\t\t0. Exit");
 
 // main menu functioning and declarations
 
@@ -71,7 +64,7 @@ void main(){
         system("cls");
     switch(choice){
             case '1':
-//                    add();
+                    booking();
                     break;
             case '2':
                     info();
@@ -82,7 +75,6 @@ void main(){
             case '4':
 //                    edit();
                     break;
-            case '0': break;
             default:
                     printf("\n\n\t\t\tError: Please make sure your Choice is Valid, Thanks!");
                     printf("\n\n\t\t\t\t\t\t\t\t\t Press any key to continue...!!");
@@ -91,6 +83,89 @@ void main(){
 
 getch();
 }
+
+// booking function
+
+void booking(){
+    char name[35], contact[15], r_no[10], r_type[10], date_1[10], date_2[10], exit;
+    int stay, rs;
+    system("cls");
+    info_2();
+    printf("\n\n");
+    printf("\t\tName: ");                 scanf("%s", &name);
+    printf("\t\tContact: ");              scanf("%s", &contact);
+    printf("\t\tRoom Number: ");          scanf("%s", &r_no);
+    printf("\t\tRoom Type: ");            scanf("%s", &r_type);
+    printf("\t\tStay for (in days): ");   scanf("%d", &stay);
+    printf("\t\tFrom: ");                 scanf("%s", &date_1);
+    printf("\t\tTill: ");                 scanf("%s", &date_2);
+
+         if(r_no == "1")
+        rs = 2500*stay;
+    else if(r_no == "2")
+        rs = 3020*stay;
+    else if(r_no == "3")
+        rs = 4000*stay;
+    else if(r_no == "4")
+        rs = 3500*stay;
+    else if(r_no == "4")
+        rs = 5000*stay;
+    else
+        printf("Something went wrong on your end go back now....");
+
+    system("cls");
+    printf("\n\n\n\n\n\t\t\tRoom number %s of class %s is issued to %s,\n\t\tfor %d days in Rs %d", r_no, r_type, name, stay, rs);
+    exit = getch();
+    if(exit)
+    system("cls");
+    main_menu();
+}
+
+// function for the rooms chart
+
+void info_2(){
+        printf("\n\n\n\n");
+        printf("\n\t\t\t\t\t\t*********************");
+        printf("\n\t\t\t\t\t\t*      Booking      *");
+        printf("\n\t\t\t\t\t\t*********************");
+        printf("\n\n\n\n");
+        printf("\t");
+        printf("\t");
+        printf("\t\t|  Room Number  |");
+        printf("   Room Type   |");
+        printf("  Charges per Day  |");
+        printf("\n\t\t\t\t=====================================================\n");
+        printf("\t");
+        printf("\t");
+        printf("\t\t|\t1\t|");
+        printf("  Deluxe Room\t|");
+        printf("\t2500\t    |\n");
+        printf("\t");
+        printf("\t");
+        printf("\t\t|\t2\t|");
+        printf("  Duplex Room\t|");
+        printf("\t3020\t    |\n");
+        printf("\t");
+        printf("\t");
+        printf("\t\t|\t3\t|");
+        printf("  Suite\t|");
+        printf("\t4000\t    |\n");
+        printf("\t");
+        printf("\t");
+        printf("\t\t|\t4\t|");
+        printf("  Cabana\t|");
+        printf("\t3500\t    |\n");
+        printf("\t");
+        printf("\t");
+        printf("\t\t|\t5\t|");
+        printf("  Studio\t|");
+        printf("\t5000\t    |\n");
+        printf("\t");
+
+
+}
+
+// function for rooms info
 
 void info(){
         printf("\n\n\n\n");
@@ -136,6 +211,7 @@ void info(){
         system("cls");
         char c;
     switch(choice){
+
             case '1':
                     printf("\n\n\n\n");
                     printf("\n\t\t\t\t\t\t*********************");
@@ -153,9 +229,9 @@ void info(){
 
                     printf("\n\n\t\t\t\t\t\t\t\t\t\t\t\tHit Enter to go Back...!!!\n\n\n");
                     c = getc(stdin);
-                    if(c=='\n'){
+                    if(c=='\n')
                         system("cls");
-                        info();}
+                        info();
                     break;
             case '2':
                     printf("\n\n\n\n");
@@ -168,7 +244,7 @@ void info(){
 
 // back to main menu
 
-                    printf("\n\n\t\t\t\t\t\t\t\t\t\t\t\tHit Enter to go Back...!!!\n\n\n");
+                    printf("\n\n\t\t\t\t\t\t\t\t\t\tHit Enter to go Back...!!!\n\n\n");
                     c = getc(stdin);
                     if(c=='\n')
                         system("cls");
@@ -226,16 +302,30 @@ void info(){
                         info();
                     break;
             default:
-                    printf("\n\n\t\t\tError: Please make sure your Choice is Valid, Thanks!");
+                    system("cls");
+                    main_menu();
+        }
+}
+
+void main_menu(){
 
 // back to main menu
 
-                    printf("\n\n\t\t\t\t\t\t\t\t\t\t\t\tHit Enter to go Back...!!!\n\n\n");
-                    c = getc(stdin);
-                    if(c=='\n')
-                        system("cls");
-                        info();
+    system("cls");
+        printf("\n\n\n\n");
+        printf("\n\t\t\t\t\t\t*************");
+        printf("\n\t\t\t\t\t\t* MAIN MENU *");
+        printf("\n\t\t\t\t\t\t*************");
+        printf("\n\n\n\n");
+        printf("\n\n\n\t\t\t1. Booking");
+        printf("\n\t\t\t2. Rooms Information");
+        printf("\n\t\t\t3. Rooms Allotted");
+        printf("\n\t\t\t4. Edit Record");
 
-                    getch();
-        }
+    char choice;
+        printf("\n\n\t\t\tEnter Your Choice: ");
+        choice = getch();
+
+
+
 }
