@@ -110,7 +110,7 @@ printf("\n\n\n\n");
         printf("\t\t|  1 |");
         printf("     %s      |", name);
         printf("  %s\t|", r_type);
-        printf("\t%d\t |\n", rs);
+        printf("%d\t |\n", rs);
         printf("\t");
         printf("\t");
         printf("\t\t|  2 |");
