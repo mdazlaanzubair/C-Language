@@ -4,16 +4,16 @@
 
 // global declaration
 
-    char name[35], contact[15], r_type[10], date_1[10], date_2[10], ex;
     char name1[35], contact1[15], r_type1[10], date_11[10], date_21[10], ex1;
     char name2[35], contact2[15], r_type2[10], date_12[10], date_22[10], ex2;
     char name3[35], contact3[15], r_type3[10], date_13[10], date_23[10], ex3;
     char name4[35], contact4[15], r_type4[10], date_14[10], date_24[10], ex4;
-    int stay, rs, r_no, charge;
-    int stay, rs, r_no2, charge2;
-    int stay, rs, r_no3, charge3;
-    int stay, rs, r_no4, charge4;
-    int stay, rs, r_no5, charge5;
+    char name5[35], contact5[15], r_type5[10], date_15[10], date_25[10], ex5;
+    int stay1, rs1, r_no1, charge1;
+    int stay2, rs2, r_no2, charge2;
+    int stay3, rs3, r_no3, charge3;
+    int stay4, rs4, r_no4, charge4;
+    int stay5, rs5, r_no5, charge5;
 
 void main(){
 
@@ -123,7 +123,25 @@ printf("\n\n\n\n");
         printf("\t");
         printf("\t\t|  2 |");
         printf("  Duplex Room\t|");
-        printf("\t3020\t    |\n");
+        printf("\t3020\t    |\n");system("cls");
+    switch(choice){
+            case '1':
+                    booking();
+                    break;
+            case '2':
+                    info();
+                    break;
+            case '3':
+                    record();
+                    break;
+            case '4':
+//                    edit();
+                    break;
+            default:
+                    printf("\n\n\t\t\tError: Please make sure your Choice is Valid, Thanks!");
+                    printf("\n\n\t\t\t\t\t\t\t\t\t Press any key to continue...!!");
+                    getch();
+        }
         printf("\t");
         printf("\t");
         printf("\t\t|  3 |");
