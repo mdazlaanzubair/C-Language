@@ -5,7 +5,15 @@
 // global declaration
 
     char name[35], contact[15], r_type[10], date_1[10], date_2[10], ex;
+    char name1[35], contact1[15], r_type1[10], date_11[10], date_21[10], ex1;
+    char name2[35], contact2[15], r_type2[10], date_12[10], date_22[10], ex2;
+    char name3[35], contact3[15], r_type3[10], date_13[10], date_23[10], ex3;
+    char name4[35], contact4[15], r_type4[10], date_14[10], date_24[10], ex4;
     int stay, rs, r_no, charge;
+    int stay, rs, r_no2, charge2;
+    int stay, rs, r_no3, charge3;
+    int stay, rs, r_no4, charge4;
+    int stay, rs, r_no5, charge5;
 
 void main(){
 
@@ -95,7 +103,7 @@ void record(){
 
 printf("\n\n\n\n");
         printf("\n\t\t\t\t\t\t*********************");
-        printf("\n\t\t\t\t\t\t* Rooms Information *");
+        printf("\n\t\t\t\t\t\t* Customer Record *");
         printf("\n\t\t\t\t\t\t*********************");
         printf("\n\n\n\n");
         printf("\t");
