@@ -17,13 +17,11 @@
 void main()
 {
 // backgroung and text color
-    system("Color 79");
+    system("Color 0B");
 // calling about function
     about();
 // calling main_menu function with choice in it
     main_menu();
-
-
 }
 
 // about function
@@ -79,13 +77,13 @@ void choice_main()
                     booking();
                     break;
             case '2':
-//                    info();
+                    info();
                     break;
             case '3':
-//                    record();
+                    record();
                     break;
             case '4':
-//                    edit();
+                    edit();
                     break;
             default:
                     printf("\n\n\t\t\tError: Please make sure your Choice is Valid, Thanks!");
@@ -123,21 +121,29 @@ void choice_booking()
         printf("\n\n\t\t\tEnter Your Choice: ");
         choice = getch();
         system("cls");
-    if(choice == '1')
-        booking1();
-        else if (choice == '2' && name1 != "")
-            booking2();
-            else if (choice == '3' && name2 != "")
-                booking3();
-                else if (choice == '4' && name3 != "")
+    switch(choice){
+            case '1':
+                    booking1();
+                    break;
+            case '2':
+                    booking2();
+
+                    break;
+            case '3':
+                    booking3();
+                    break;
+            case '4':
                     booking4();
-                    else if (choice == '5' && name4 != "")
-                        booking5();
-    else
-        printf("\n\n\t\t\tError: Please make sure your Choice is Valid, Thanks!");
-        printf("\n\n\t\t\t\t\t\t\t\t\t Press any key to continue...!!");
-        getch();
-        booking();
+                    break;
+            case '5':
+                    booking5();
+                    break;
+            default:
+                    printf("\n\n\t\t\tError: Please make sure your Choice is Valid, Thanks!");
+                    printf("\n\n\t\t\t\t\t\t\t\t\t Press any key to continue...!!");
+                    getch();
+                    main_menu();
+        }
 }
 
 // customer reregistration
@@ -156,6 +162,7 @@ void booking()
     printf("\n\t\t\t4. Register Fourth Customer");
     printf("\n\t\t\t5. Register Fifth Customer");
     choice_booking();
+
 }
 
 // for first customer
@@ -167,6 +174,11 @@ void booking1()
     printf("\n\t\t\t\t\t\t*****************");
     printf("\n\t\t\t\t\t\t* B O O K I N G *");
     printf("\n\t\t\t\t\t\t*****************");
+    printf("\n\n\n\n");
+
+    // calling chart function
+    rate_chart();
+
     printf("\n\n\n\n");
     printf("\t\t\tName: ");                 scanf("%s", &name1);
     printf("\t\t\tContact: ");              scanf("%s", &contact1);
@@ -193,6 +205,11 @@ void booking2()
     printf("\n\t\t\t\t\t\t* B O O K I N G *");
     printf("\n\t\t\t\t\t\t*****************");
     printf("\n\n\n\n");
+
+    // calling chart function
+    rate_chart();
+
+    printf("\n\n\n\n");
     printf("\t\t\tName: ");                 scanf("%s", &name2);
     printf("\t\t\tContact: ");              scanf("%s", &contact2);
     printf("\t\t\tRoom Number: ");          scanf("%d", &r_no2);
@@ -217,6 +234,11 @@ void booking3()
     printf("\n\t\t\t\t\t\t*****************");
     printf("\n\t\t\t\t\t\t* B O O K I N G *");
     printf("\n\t\t\t\t\t\t*****************");
+    printf("\n\n\n\n");
+
+    // calling chart function
+    rate_chart();
+
     printf("\n\n\n\n");
     printf("\t\t\tName: ");                 scanf("%s", &name3);
     printf("\t\t\tContact: ");              scanf("%s", &contact3);
@@ -243,6 +265,11 @@ void booking4()
     printf("\n\t\t\t\t\t\t* B O O K I N G *");
     printf("\n\t\t\t\t\t\t*****************");
     printf("\n\n\n\n");
+
+    // calling chart function
+    rate_chart();
+
+    printf("\n\n\n\n");
     printf("\t\t\tName: ");                 scanf("%s", &name4);
     printf("\t\t\tContact: ");              scanf("%s", &contact4);
     printf("\t\t\tRoom Number: ");          scanf("%d", &r_no4);
@@ -268,6 +295,11 @@ void booking5()
     printf("\n\t\t\t\t\t\t* B O O K I N G *");
     printf("\n\t\t\t\t\t\t*****************");
     printf("\n\n\n\n");
+
+    // calling chart function
+    rate_chart();
+
+    printf("\n\n\n\n");
     printf("\t\t\tName: ");                 scanf("%s", &name5);
     printf("\t\t\tContact: ");              scanf("%s", &contact5);
     printf("\t\t\tRoom Number: ");          scanf("%d", &r_no5);
@@ -283,4 +315,585 @@ void booking5()
     booking();
 }
 
+// rooms information function
 
+void info()
+{
+        printf("\n\n\n\n");
+        printf("\n\t\t\t\t\t\t*********************");
+        printf("\n\t\t\t\t\t\t* Rooms Information *");
+        printf("\n\t\t\t\t\t\t*********************");
+        printf("\n\n\n\n");
+        printf("\t");
+        printf("\t");
+        printf("\t\t|  Room Number  |");
+        printf("   Room Type   |");
+        printf("  Charges per Day  |");
+        printf("\n\t\t\t\t=====================================================\n");
+        printf("\t");
+        printf("\t");
+        printf("\t\t|\t1\t|");
+        printf("  Deluxe Room\t|");
+        printf("\t2500\t    |\n");
+        printf("\t");
+        printf("\t");
+        printf("\t\t|\t2\t|");
+        printf("  Duplex Room\t|");
+        printf("\t3020\t    |\n");
+        printf("\t");
+        printf("\t");
+        printf("\t\t|\t3\t|");
+        printf("  Suite\t|");
+        printf("\t4000\t    |\n");
+        printf("\t");
+        printf("\t");
+        printf("\t\t|\t4\t|");
+        printf("  Cabana\t|");
+        printf("\t3500\t    |\n");
+        printf("\t");
+        printf("\t");
+        printf("\t\t|\t5\t|");
+        printf("  Studio\t|");
+        printf("\t5000\t    |\n");
+        printf("\t");
+        char choice;
+        printf("\n\n\t\t\tEnter Your Choice: ");
+        choice = getch();
+        system("cls");
+        char c;
+    switch(choice){
+
+            case '1':
+                    printf("\n\n\n\n");
+                    printf("\n\t\t\t\t\t\t*********************");
+                    printf("\n\t\t\t\t\t\t* Rooms Information *");
+                    printf("\n\t\t\t\t\t\t*********************");
+                    printf("\n\n\n\n");
+                    printf("\t\t\tDeluxe Room:\n");
+                    printf("\t\t\t\tThey are available in Single Deluxe and Double Deluxe variants.\n");
+                    printf("\t\t\tDeluxe room is well furnished. Some amenities are attached bathroom,\n");
+                    printf("\t\t\ta dressing table, a bedside table, a small writing table, a TV,\n");
+                    printf("\t\t\tand a small fridge. The floor is covered with carpet and most suitable\n");
+                    printf("\t\t\tfor small families.");
+
+// back to main menu
+
+                    printf("\n\n\t\t\t\t\t\t\t\t\t\t\t\tHit Enter to go Back...!!!\n\n\n");
+                    c = getc(stdin);
+                    if(c=='\n')
+                        system("cls");
+                        info();
+                    break;
+            case '2':
+                    printf("\n\n\n\n");
+                    printf("\n\t\t\t\t\t\t*********************");
+                    printf("\n\t\t\t\t\t\t* Rooms Information *");
+                    printf("\n\t\t\t\t\t\t*********************");
+                    printf("\n\n\n\n");
+                    printf("\t\t\tDuplex Room:\n");
+                    printf("\t\t\t\tThis type is composed of two rooms located on two different floors,\n\t\t\tconnected with internal stairs.\n");
+
+// back to main menu
+
+                    printf("\n\n\t\t\t\t\t\t\t\t\t\tHit Enter to go Back...!!!\n\n\n");
+                    c = getc(stdin);
+                    if(c=='\n')
+                        system("cls");
+                        info();
+                    break;
+            case '3':
+                    printf("\n\n\n\n");
+                    printf("\n\t\t\t\t\t\t*********************");
+                    printf("\n\t\t\t\t\t\t* Rooms Information *");
+                    printf("\n\t\t\t\t\t\t*********************");
+                    printf("\n\n\n\n");
+                    printf("\t\t\tSuite:\n");
+                    printf("\t\t\t\tIt is composed of one or more bedrooms, a living room, and a dining area.\n\t\t\tIt is excellent for the guests who prefer more space, wish to entertain their guests\n\t\t\twithout interruption and giving up privacy.\n");
+
+// back to main menu
+
+                    printf("\n\n\t\t\t\t\t\t\t\t\t\t\t\tHit Enter to go Back...!!!\n\n\n");
+                    c = getc(stdin);
+                    if(c=='\n')
+                        system("cls");
+                        info();
+                    break;
+            case '4':
+                    printf("\n\n\n\n");
+                    printf("\n\t\t\t\t\t\t*********************");
+                    printf("\n\t\t\t\t\t\t* Rooms Information *");
+                    printf("\n\t\t\t\t\t\t*********************");
+                    printf("\n\n\n\n");
+                    printf("\t\t\tCabana:\n");
+                    printf("\t\t\t\tThis type of room faces water body, beach, or a swimming pool. \n\t\t\tIt generally has a large balcony.\n");
+
+// back to main menu
+
+                    printf("\n\n\t\t\t\t\t\t\t\t\t\t\t\tHit Enter to go Back...!!!\n\n\n");
+                    c = getc(stdin);
+                    if(c=='\n')
+                        system("cls");
+                        info();
+                    break;
+            case '5':
+                    printf("\n\n\n\n");
+                    printf("\n\t\t\t\t\t\t*********************");
+                    printf("\n\t\t\t\t\t\t* Rooms Information *");
+                    printf("\n\t\t\t\t\t\t*********************");
+                    printf("\n\n\n\n");
+                    printf("\t\t\tStudio:\n");
+                    printf("\t\t\t\tThey are twin adjacent rooms: A living room with sofa, \n\t\t\tcoffee table and chairs, and a bedroom. It is also equipped with \n\t\t\tfan/air conditioner, a small kitchen corner, and a dining area. \n\t\t\tThe furniture is often compact.\n");
+
+// back to main menu
+
+                    printf("\n\n\t\t\t\t\t\t\t\t\t\t\t\tHit Enter to go Back...!!!\n\n\n");
+                    c = getc(stdin);
+                    if(c=='\n')
+                        system("cls");
+                        info();
+                    break;
+            default:
+                    system("cls");
+                    main_menu();
+        }
+}
+
+// function for the rooms chart
+
+void rate_chart()
+{
+        printf("\n\n\n\n");
+        printf("\t");
+        printf("\t");
+        printf("\t\t|  Room Number  |");
+        printf("   Room Type   |");
+        printf("  Charges per Day  |");
+        printf("\n\t\t\t\t=====================================================\n");
+        printf("\t");
+        printf("\t");
+        printf("\t\t|\t1\t|");
+        printf("  Deluxe Room\t|");
+        printf("\t2500\t    |\n");
+        printf("\t");
+        printf("\t");
+        printf("\t\t|\t2\t|");
+        printf("  Duplex Room\t|");
+        printf("\t3020\t    |\n");
+        printf("\t");
+        printf("\t");
+        printf("\t\t|\t3\t|");
+        printf("  Suite\t|");
+        printf("\t4000\t    |\n");
+        printf("\t");
+        printf("\t");
+        printf("\t\t|\t4\t|");
+        printf("  Cabana\t|");
+        printf("\t3500\t    |\n");
+        printf("\t");
+        printf("\t");
+        printf("\t\t|\t5\t|");
+        printf("  Studio\t|");
+        printf("\t5000\t    |\n");
+        printf("\t");
+}
+
+// choice for record
+
+void choice_record()
+{
+    // this function is to select items from the menu
+    char choice;
+        printf("\n\n\t\t\tEnter Your Choice: ");
+        choice = getch();
+        system("cls");
+    switch(choice){
+            case '1':
+                    record1();
+                    break;
+            case '2':
+                    record2();
+                    break;
+            case '3':
+                    record3();
+                    break;
+            case '4':
+                    record4();
+                    break;
+            case '5':
+                    record5();
+                    break;
+            case '6':
+                    printf("\n\n\n\n\t\t\t\t\t\t**********************************************");
+                    printf("\n\t\t\t\t\t\t* ARE YOU SURE YOU WANT TO REOVE ALL RECORD? *");
+                    printf("\n\t\t\t\t\t\t**********************************************");
+                    char rm;
+                    printf("\n\n\t\t\tEnter Your Choice (y/n): ");
+                    rm = getch();
+                    switch(rm){
+                        case 'y':
+                            reset_record();
+                            getch();
+                            main_menu();
+                            break;
+                        case 'n':
+                            main_menu();
+                            break;
+                        default:
+                            printf("\n\n\n\n\t\t\t\t\tPlease Enter a Valid Answer....!!");
+                            getch();
+                            record();
+                    }
+                    break;
+            default:
+                    printf("\n\n\t\t\tError: Please make sure your Choice is Valid, Thanks!");
+                    printf("\n\n\t\t\t\t\t\t\t\t\t Press any key to continue...!!");
+                    getch();
+                    main_menu();
+        }
+}
+
+// customer record list
+
+void record()
+{
+    // this function is to display customer detail and record
+    system("cls");
+    printf("\n\n\n\n");
+    printf("\n\t\t\t\t\t\t***************");
+    printf("\n\t\t\t\t\t\t* R E C O R D *");
+    printf("\n\t\t\t\t\t\t***************");
+    printf("\n\n\n\n");
+    printf("\n\n\n\t\t\t1. Register First Customer");
+    printf("\n\t\t\t2. Register Second Customer");
+    printf("\n\t\t\t3. Register Third Customer");
+    printf("\n\t\t\t4. Register Fourth Customer");
+    printf("\n\t\t\t5. Register Fifth Customer");
+    printf("\n\t\t\t6. Reset All Record");
+    choice_record();
+}
+
+// first record
+
+void record1()
+{
+    system("cls");
+    printf("\n\n\n\n");
+    printf("\n\t\t\t\t\t\t***************");
+    printf("\n\t\t\t\t\t\t* R E C O R D *");
+    printf("\n\t\t\t\t\t\t***************");
+    printf("\n\n\n\n");
+    printf("\n\n\n\n");
+    printf("\t\t\tName: %s\n", &name1);
+    printf("\t\t\tContact: %s\n", &contact1);
+    printf("\t\t\tRoom Number: %d\n", &r_no1);
+    printf("\t\t\tRoom Type: %s\n", &r_type1);
+    printf("\t\t\tStay for (in days): %d\n", &stay1);
+    printf("\t\t\tAmount: %d\n", &rs1);
+    printf("\t\t\tFrom: %s\n", &date_11);
+    printf("\t\t\tTill: %s\n", &date_21);
+    getch();
+    record();
+}
+
+// second record
+
+void record2()
+{
+    system("cls");
+    printf("\n\n\n\n");
+    printf("\n\t\t\t\t\t\t***************");
+    printf("\n\t\t\t\t\t\t* R E C O R D *");
+    printf("\n\t\t\t\t\t\t***************");
+    printf("\n\n\n\n");
+    printf("\n\n\n\n");
+    printf("\t\t\tName: %s\n", &name2);
+    printf("\t\t\tContact: %s\n", &contact2);
+    printf("\t\t\tRoom Number: %d\n", &r_no2);
+    printf("\t\t\tRoom Type: %s\n", &r_type2);
+    printf("\t\t\tStay for (in days): %d\n", &stay2);
+    printf("\t\t\tAmount: %d\n", &rs2);
+    printf("\t\t\tFrom: %s\n", &date_12);
+    printf("\t\t\tTill: %s\n", &date_22);
+    getch();
+    record();
+}
+
+// third record
+
+void record3()
+{
+    system("cls");
+    printf("\n\n\n\n");
+    printf("\n\t\t\t\t\t\t***************");
+    printf("\n\t\t\t\t\t\t* R E C O R D *");
+    printf("\n\t\t\t\t\t\t***************");
+    printf("\n\n\n\n");
+    printf("\n\n\n\n");
+    printf("\t\t\tName: %s\n", &name3);
+    printf("\t\t\tContact: %s\n", &contact3);
+    printf("\t\t\tRoom Number: %d\n", &r_no3);
+    printf("\t\t\tRoom Type: %s\n", &r_type3);
+    printf("\t\t\tStay for (in days): %d\n", &stay3);
+    printf("\t\t\tAmount: %d\n", &rs3);
+    printf("\t\t\tFrom: %s\n", &date_13);
+    printf("\t\t\tTill: %s\n", &date_23);
+    getch();
+    record();
+}
+
+// fourth record
+
+void record4()
+{
+    system("cls");
+    printf("\n\n\n\n");
+    printf("\n\t\t\t\t\t\t***************");
+    printf("\n\t\t\t\t\t\t* R E C O R D *");
+    printf("\n\t\t\t\t\t\t***************");
+    printf("\n\n\n\n");
+    printf("\n\n\n\n");
+    printf("\t\t\tName: %s\n", &name4);
+    printf("\t\t\tContact: %s\n", &contact4);
+    printf("\t\t\tRoom Number: %d\n", &r_no4);
+    printf("\t\t\tRoom Type: %s\n", &r_type4);
+    printf("\t\t\tStay for (in days): %d\n", &stay4);
+    printf("\t\t\tAmount: %d\n", &rs4);
+    printf("\t\t\tFrom: %s\n", &date_14);
+    printf("\t\t\tTill: %s\n", &date_24);
+    getch();
+    record();
+}
+
+// fifth record
+
+void record5()
+{
+    system("cls");
+    printf("\n\n\n\n");
+    printf("\n\t\t\t\t\t\t***************");
+    printf("\n\t\t\t\t\t\t* R E C O R D *");
+    printf("\n\t\t\t\t\t\t***************");
+    printf("\n\n\n\n");
+    printf("\n\n\n\n");
+    printf("\t\t\tName: %s\n", &name5);
+    printf("\t\t\tContact: %s\n", &contact5);
+    printf("\t\t\tRoom Number: %d\n", &r_no5);
+    printf("\t\t\tRoom Type: %s\n", &r_type5);
+    printf("\t\t\tStay for (in days): %d\n", &stay5);
+    printf("\t\t\tAmount: %d\n", &rs5);
+    printf("\t\t\tFrom: %s\n", &date_15);
+    printf("\t\t\tTill: %s\n", &date_25);
+    getch();
+    record();
+}
+
+// reset record
+
+void reset_record()
+{
+    // to remove all records
+    printf("Record Removed Successfully");
+
+}
+
+// choice for booking
+
+void choice_booking()
+{
+    // this function is to select items from the menu
+    char choice;
+        printf("\n\n\t\t\tEnter Your Choice: ");
+        choice = getch();
+        system("cls");
+    switch(choice){
+            case '1':
+                    edit1();
+                    break;
+            case '2':
+                    edit2();
+                    break;
+            case '3':
+                    edit3();
+                    break;
+            case '4':
+                    edit4();
+                    break;
+            case '5':
+                    edit5();
+                    break;
+            default:
+                    printf("\n\n\t\t\tError: Please make sure your Choice is Valid, Thanks!");
+                    printf("\n\n\t\t\t\t\t\t\t\t\t Press any key to continue...!!");
+                    getch();
+                    main_menu();
+        }
+}
+
+// customer reregistration
+
+void edit()
+{
+    // this function is to call functions to book
+    system("cls");
+    printf("\n\t\t\t\t\t\t*****************");
+    printf("\n\t\t\t\t\t\t*  EDIT RECORD  *");
+    printf("\n\t\t\t\t\t\t*****************");
+    printf("\n\n\n\n");
+    printf("\n\n\n\t\t\t1. Edit First Customer");
+    printf("\n\t\t\t2. Edit Second Customer");
+    printf("\n\t\t\t3. Edit Third Customer");
+    printf("\n\t\t\t4. Edit Fourth Customer");
+    printf("\n\t\t\t5. Edit Fifth Customer");
+    choice_edit();
+
+}
+
+// for first customer
+
+void edit1()
+{
+    // this function is to record customer's record
+    system("cls");
+    printf("\n\t\t\t\t\t\t*****************");
+    printf("\n\t\t\t\t\t\t*  EDIT RECORD  *");
+    printf("\n\t\t\t\t\t\t*****************");
+    printf("\n\n\n\n");
+
+    // calling chart function
+    rate_chart();
+
+    printf("\n\n\n\n");
+    printf("\t\t\tName: ");                 scanf("%s", &name1);
+    printf("\t\t\tContact: ");              scanf("%s", &contact1);
+    printf("\t\t\tRoom Number: ");          scanf("%d", &r_no1);
+    printf("\t\t\tRoom Type: ");            scanf("%s", &r_type1);
+    printf("\t\t\tStay for (in days): ");   scanf("%d", &stay1);
+    printf("\t\t\tCharges: ");              scanf("%d", &charge1);
+    printf("\t\t\tFrom: ");                 scanf("%s", &date_11);
+    printf("\t\t\tTill: ");                 scanf("%s", &date_21);
+    rs1 = charge1 * stay1;
+    system("cls");
+    printf("Your Record is Successfully Modified.");
+    getch();
+    edit();
+}
+
+// for second customer
+
+void edit2()
+{
+    // this function is to record customer's record
+    system("cls");
+    printf("\n\t\t\t\t\t\t*****************");
+    printf("\n\t\t\t\t\t\t*  EDIT RECORD  *");
+    printf("\n\t\t\t\t\t\t*****************");
+    printf("\n\n\n\n");
+
+    // calling chart function
+    rate_chart();
+
+    printf("\n\n\n\n");
+    printf("\t\t\tName: ");                 scanf("%s", &name2);
+    printf("\t\t\tContact: ");              scanf("%s", &contact2);
+    printf("\t\t\tRoom Number: ");          scanf("%d", &r_no2);
+    printf("\t\t\tRoom Type: ");            scanf("%s", &r_type2);
+    printf("\t\t\tStay for (in days): ");   scanf("%d", &stay2);
+    printf("\t\t\tCharges: ");              scanf("%d", &charge2);
+    printf("\t\t\tFrom: ");                 scanf("%s", &date_12);
+    printf("\t\t\tTill: ");                 scanf("%s", &date_22);
+    rs2 = charge2 * stay2;
+    system("cls");
+    printf("Your Record is Successfully Modified.");
+    getch();
+    edit();
+}
+
+// for third customer
+
+void edit3()
+{
+    // this function is to record customer's record
+    system("cls");
+    printf("\n\t\t\t\t\t\t*****************");
+    printf("\n\t\t\t\t\t\t*  EDIT RECORD  *");
+    printf("\n\t\t\t\t\t\t*****************");
+    printf("\n\n\n\n");
+
+    // calling chart function
+    rate_chart();
+
+    printf("\n\n\n\n");
+    printf("\t\t\tName: ");                 scanf("%s", &name3);
+    printf("\t\t\tContact: ");              scanf("%s", &contact3);
+    printf("\t\t\tRoom Number: ");          scanf("%d", &r_no3);
+    printf("\t\t\tRoom Type: ");            scanf("%s", &r_type3);
+    printf("\t\t\tStay for (in days): ");   scanf("%d", &stay3);
+    printf("\t\t\tCharges: ");              scanf("%d", &charge3);
+    printf("\t\t\tFrom: ");                 scanf("%s", &date_13);
+    printf("\t\t\tTill: ");                 scanf("%s", &date_23);
+    rs3 = charge3 * stay3;
+    system("cls");
+    printf("Your Record is Successfully Modified.");
+    getch();
+    edit();
+}
+
+// for fourth customer
+
+void edit4()
+{
+    // this function is to record customer's record
+    system("cls");
+    printf("\n\t\t\t\t\t\t*****************");
+    printf("\n\t\t\t\t\t\t*  EDIT RECORD  *");
+    printf("\n\t\t\t\t\t\t*****************");
+    printf("\n\n\n\n");
+
+    // calling chart function
+    rate_chart();
+
+    printf("\n\n\n\n");
+    printf("\t\t\tName: ");                 scanf("%s", &name4);
+    printf("\t\t\tContact: ");              scanf("%s", &contact4);
+    printf("\t\t\tRoom Number: ");          scanf("%d", &r_no4);
+    printf("\t\t\tRoom Type: ");            scanf("%s", &r_type4);
+    printf("\t\t\tStay for (in days): ");   scanf("%d", &stay4);
+    printf("\t\t\tCharges: ");              scanf("%d", &charge4);
+    printf("\t\t\tFrom: ");                 scanf("%s", &date_14);
+    printf("\t\t\tTill: ");                 scanf("%s", &date_24);
+    rs4 = charge4 * stay4;
+    system("cls");
+    printf("Your Record is Successfully Modified.);
+    getch();
+    edit();
+}
+
+// for fifth customer
+
+void edit5()
+{
+    // this function is to record customer's record
+    system("cls");
+    printf("\n\t\t\t\t\t\t*****************");
+    printf("\n\t\t\t\t\t\t*  EDIT RECORD  *");
+    printf("\n\t\t\t\t\t\t*****************");
+    printf("\n\n\n\n");
+
+    // calling chart function
+    rate_chart();
+
+    printf("\n\n\n\n");
+    printf("\t\t\tName: ");                 scanf("%s", &name5);
+    printf("\t\t\tContact: ");              scanf("%s", &contact5);
+    printf("\t\t\tRoom Number: ");          scanf("%d", &r_no5);
+    printf("\t\t\tRoom Type: ");            scanf("%s", &r_type5);
+    printf("\t\t\tStay for (in days): ");   scanf("%d", &stay5);
+    printf("\t\t\tCharges: ");              scanf("%d", &charge5);
+    printf("\t\t\tFrom: ");                 scanf("%s", &date_15);
+    printf("\t\t\tTill: ");                 scanf("%s", &date_25);
+    rs5 = charge5 * stay5;
+    system("cls");
+    printf("Your Record is Successfully Modified.");
+    getch();
+    edit();
+}
