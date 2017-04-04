@@ -2,6 +2,7 @@
 #include<conio.h>
 void main (void)
 {
+    system("Color 73");
  char ch;
  float num1,num2;
 // clrscr();
