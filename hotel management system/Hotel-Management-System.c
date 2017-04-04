@@ -86,7 +86,6 @@ void choice_main()
                     edit();
                     break;
             default:
-                    printf("\n\n\t\t\tError: Please make sure your Choice is Valid, Thanks!");
                     printf("\n\n\t\t\t\t\t\t\t\t\t Press any key to continue...!!");
                     getch();
                     main_menu();
@@ -139,7 +138,6 @@ void choice_booking()
                     booking5();
                     break;
             default:
-                    printf("\n\n\t\t\tError: Please make sure your Choice is Valid, Thanks!");
                     printf("\n\n\t\t\t\t\t\t\t\t\t Press any key to continue...!!");
                     getch();
                     main_menu();
@@ -539,13 +537,12 @@ void choice_record()
                             main_menu();
                             break;
                         default:
-                            printf("\n\n\n\n\t\t\t\t\tPlease Enter a Valid Answer....!!");
+                            printf("\n\n\n\n\t\t\t\t\tPlease any key to continue....!!");
                             getch();
                             record();
                     }
                     break;
             default:
-                    printf("\n\n\t\t\tError: Please make sure your Choice is Valid, Thanks!");
                     printf("\n\n\t\t\t\t\t\t\t\t\t Press any key to continue...!!");
                     getch();
                     main_menu();
@@ -583,14 +580,14 @@ void record1()
     printf("\n\t\t\t\t\t\t***************");
     printf("\n\n\n\n");
     printf("\n\n\n\n");
-    printf("\t\t\tName: %s\n", &name1);
-    printf("\t\t\tContact: %s\n", &contact1);
-    printf("\t\t\tRoom Number: %d\n", &r_no1);
-    printf("\t\t\tRoom Type: %s\n", &r_type1);
-    printf("\t\t\tStay for (in days): %d\n", &stay1);
-    printf("\t\t\tAmount: %d\n", &rs1);
-    printf("\t\t\tFrom: %s\n", &date_11);
-    printf("\t\t\tTill: %s\n", &date_21);
+    printf("\t\t\tName: %s\n", name1);
+    printf("\t\t\tContact: %s\n", contact1);
+    printf("\t\t\tRoom Number: %d\n", r_no1);
+    printf("\t\t\tRoom Type: %s\n", r_type1);
+    printf("\t\t\tStay for (in days): %d\n", stay1);
+    printf("\t\t\tAmount: %d\n", rs1);
+    printf("\t\t\tFrom: %s\n", date_11);
+    printf("\t\t\tTill: %s\n", date_21);
     getch();
     record();
 }
@@ -606,14 +603,14 @@ void record2()
     printf("\n\t\t\t\t\t\t***************");
     printf("\n\n\n\n");
     printf("\n\n\n\n");
-    printf("\t\t\tName: %s\n", &name2);
-    printf("\t\t\tContact: %s\n", &contact2);
-    printf("\t\t\tRoom Number: %d\n", &r_no2);
-    printf("\t\t\tRoom Type: %s\n", &r_type2);
-    printf("\t\t\tStay for (in days): %d\n", &stay2);
-    printf("\t\t\tAmount: %d\n", &rs2);
-    printf("\t\t\tFrom: %s\n", &date_12);
-    printf("\t\t\tTill: %s\n", &date_22);
+    printf("\t\t\tName: %s\n", name2);
+    printf("\t\t\tContact: %s\n", contact2);
+    printf("\t\t\tRoom Number: %d\n", r_no2);
+    printf("\t\t\tRoom Type: %s\n", r_type2);
+    printf("\t\t\tStay for (in days): %d\n", stay2);
+    printf("\t\t\tAmount: %d\n", rs2);
+    printf("\t\t\tFrom: %s\n", date_12);
+    printf("\t\t\tTill: %s\n", date_22);
     getch();
     record();
 }
@@ -629,14 +626,14 @@ void record3()
     printf("\n\t\t\t\t\t\t***************");
     printf("\n\n\n\n");
     printf("\n\n\n\n");
-    printf("\t\t\tName: %s\n", &name3);
-    printf("\t\t\tContact: %s\n", &contact3);
-    printf("\t\t\tRoom Number: %d\n", &r_no3);
-    printf("\t\t\tRoom Type: %s\n", &r_type3);
-    printf("\t\t\tStay for (in days): %d\n", &stay3);
-    printf("\t\t\tAmount: %d\n", &rs3);
-    printf("\t\t\tFrom: %s\n", &date_13);
-    printf("\t\t\tTill: %s\n", &date_23);
+    printf("\t\t\tName: %s\n", name3);
+    printf("\t\t\tContact: %s\n", contact3);
+    printf("\t\t\tRoom Number: %d\n", r_no3);
+    printf("\t\t\tRoom Type: %s\n", r_type3);
+    printf("\t\t\tStay for (in days): %d\n", stay3);
+    printf("\t\t\tAmount: %d\n", rs3);
+    printf("\t\t\tFrom: %s\n", date_13);
+    printf("\t\t\tTill: %s\n", date_23);
     getch();
     record();
 }
@@ -652,14 +649,14 @@ void record4()
     printf("\n\t\t\t\t\t\t***************");
     printf("\n\n\n\n");
     printf("\n\n\n\n");
-    printf("\t\t\tName: %s\n", &name4);
-    printf("\t\t\tContact: %s\n", &contact4);
-    printf("\t\t\tRoom Number: %d\n", &r_no4);
-    printf("\t\t\tRoom Type: %s\n", &r_type4);
-    printf("\t\t\tStay for (in days): %d\n", &stay4);
-    printf("\t\t\tAmount: %d\n", &rs4);
-    printf("\t\t\tFrom: %s\n", &date_14);
-    printf("\t\t\tTill: %s\n", &date_24);
+    printf("\t\t\tName: %s\n", name4);
+    printf("\t\t\tContact: %s\n", contact4);
+    printf("\t\t\tRoom Number: %d\n", r_no4);
+    printf("\t\t\tRoom Type: %s\n", r_type4);
+    printf("\t\t\tStay for (in days): %d\n", stay4);
+    printf("\t\t\tAmount: %d\n", rs4);
+    printf("\t\t\tFrom: %s\n", date_14);
+    printf("\t\t\tTill: %s\n", date_24);
     getch();
     record();
 }
@@ -675,14 +672,14 @@ void record5()
     printf("\n\t\t\t\t\t\t***************");
     printf("\n\n\n\n");
     printf("\n\n\n\n");
-    printf("\t\t\tName: %s\n", &name5);
-    printf("\t\t\tContact: %s\n", &contact5);
-    printf("\t\t\tRoom Number: %d\n", &r_no5);
-    printf("\t\t\tRoom Type: %s\n", &r_type5);
-    printf("\t\t\tStay for (in days): %d\n", &stay5);
-    printf("\t\t\tAmount: %d\n", &rs5);
-    printf("\t\t\tFrom: %s\n", &date_15);
-    printf("\t\t\tTill: %s\n", &date_25);
+    printf("\t\t\tName: %s\n", name5);
+    printf("\t\t\tContact: %s\n", contact5);
+    printf("\t\t\tRoom Number: %d\n", r_no5);
+    printf("\t\t\tRoom Type: %s\n", r_type5);
+    printf("\t\t\tStay for (in days): %d\n", stay5);
+    printf("\t\t\tAmount: %d\n", rs5);
+    printf("\t\t\tFrom: %s\n", date_15);
+    printf("\t\t\tTill: %s\n", date_25);
     getch();
     record();
 }
@@ -698,7 +695,7 @@ void reset_record()
 
 // choice for booking
 
-void choice_booking()
+void choice_edit()
 {
     // this function is to select items from the menu
     char choice;
@@ -722,7 +719,6 @@ void choice_booking()
                     edit5();
                     break;
             default:
-                    printf("\n\n\t\t\tError: Please make sure your Choice is Valid, Thanks!");
                     printf("\n\n\t\t\t\t\t\t\t\t\t Press any key to continue...!!");
                     getch();
                     main_menu();
@@ -863,7 +859,7 @@ void edit4()
     printf("\t\t\tTill: ");                 scanf("%s", &date_24);
     rs4 = charge4 * stay4;
     system("cls");
-    printf("Your Record is Successfully Modified.);
+    printf("Your Record is Successfully Modified.");
     getch();
     edit();
 }
