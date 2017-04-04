@@ -3,11 +3,12 @@
 
 // global declaration
 
-    char name1[35], contact1[15], r_type1[10], date_11[10], date_21[10], ex1;
-    char name2[35], contact2[15], r_type2[10], date_12[10], date_22[10], ex2;
-    char name3[35], contact3[15], r_type3[10], date_13[10], date_23[10], ex3;
-    char name4[35], contact4[15], r_type4[10], date_14[10], date_24[10], ex4;
-    char name5[35], contact5[15], r_type5[10], date_15[10], date_25[10], ex5;
+    char name1[35], contact1[35], r_type1[35], date_11[35], date_21[35], ex1;
+    char name2[35], contact2[35], r_type2[35], date_12[35], date_22[35], ex2;
+    char name3[35], contact3[35], r_type3[35], date_13[35], date_23[35], ex3;
+    char name4[35], contact4[35], r_type4[38], date_14[35], date_24[35], ex4;
+    char name5[35], contact5[35], r_type5[35], date_15[35], date_25[35], ex5;
+    char khali[10] = " ";
     int stay1, rs1, r_no1, charge1;
     int stay2, rs2, r_no2, charge2;
     int stay3, rs3, r_no3, charge3;
@@ -520,28 +521,6 @@ void choice_record()
             case '5':
                     record5();
                     break;
-            case '6':
-                    printf("\n\n\n\n\t\t\t\t\t\t**********************************************");
-                    printf("\n\t\t\t\t\t\t* ARE YOU SURE YOU WANT TO REOVE ALL RECORD? *");
-                    printf("\n\t\t\t\t\t\t**********************************************");
-                    char rm;
-                    printf("\n\n\t\t\tEnter Your Choice (y/n): ");
-                    rm = getch();
-                    switch(rm){
-                        case 'y':
-                            reset_record();
-                            getch();
-                            main_menu();
-                            break;
-                        case 'n':
-                            main_menu();
-                            break;
-                        default:
-                            printf("\n\n\n\n\t\t\t\t\tPlease any key to continue....!!");
-                            getch();
-                            record();
-                    }
-                    break;
             default:
                     printf("\n\n\t\t\t\t\t\t\t\t\t Press any key to continue...!!");
                     getch();
@@ -560,12 +539,11 @@ void record()
     printf("\n\t\t\t\t\t\t* R E C O R D *");
     printf("\n\t\t\t\t\t\t***************");
     printf("\n\n\n\n");
-    printf("\n\n\n\t\t\t1. Register First Customer");
-    printf("\n\t\t\t2. Register Second Customer");
-    printf("\n\t\t\t3. Register Third Customer");
-    printf("\n\t\t\t4. Register Fourth Customer");
-    printf("\n\t\t\t5. Register Fifth Customer");
-    printf("\n\t\t\t6. Reset All Record");
+    printf("\n\n\n\t\t\t1. Record of First Customer");
+    printf("\n\t\t\t2. Record of Second Customer");
+    printf("\n\t\t\t3. Record of Third Customer");
+    printf("\n\t\t\t4. Record of Fourth Customer");
+    printf("\n\t\t\t5. Record of Fifth Customer");
     choice_record();
 }
 
@@ -684,16 +662,7 @@ void record5()
     record();
 }
 
-// reset record
-
-void reset_record()
-{
-    // to remove all records
-    printf("Record Removed Successfully");
-
-}
-
-// choice for booking
+// choice for edit
 
 void choice_edit()
 {
@@ -725,7 +694,7 @@ void choice_edit()
         }
 }
 
-// customer reregistration
+// customer record editor
 
 void edit()
 {
